@@ -15,8 +15,8 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function welcome() {
-        // external API
-        $url = 'https://api.unsplash.com/users/rumburner/collections/?client_id=_6vo-P369_RKick1_x52OF3513ef-qWxJoeoQgWWlGQ';
+        // Your API key unsplash
+        $url = 'https://api.unsplash.com/users/rumburner/collections/?client_id=API_KEY';
         $request = Http::get($url);
         $data = json_decode($request, true);
         $imgData = $data[0]['preview_photos'];
